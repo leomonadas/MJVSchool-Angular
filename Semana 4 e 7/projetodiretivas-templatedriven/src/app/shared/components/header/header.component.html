@@ -1,0 +1,11 @@
+<nav>
+    <a [routerLink]="['']">
+        <h1>Funkorama</h1>
+    </a>
+    <ul>
+        <li><a (click)="navigateByUrl('')">Home</a></li>
+        <!-- <li><a (click)="navigateByUrl('sobre')">Sobre</a></li> -->
+        <li *ngIf="!user"><a (click)="navigateByUrl('login')">Login</a></li>
+        <li *ngIf="user"><a (click)="exit()">Sair</a></li>
+    </ul>
+</nav>
